@@ -29,7 +29,9 @@ export default class ApiCaller extends Component {
   render() {
     return (
       <div>
-        <div>{this.state.emails}</div>
+        {this.state.emails.map((email, index) => (
+            <p key={index}>Email: {email} </p>
+        ))}
       </div>
     );
   }
